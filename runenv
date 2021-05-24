@@ -1,0 +1,51 @@
+#!/bin/sh
+
+echo "===> hostname"
+hostname
+echo
+
+echo "===> lsb_release -a"
+lsb_release -a
+echo
+
+echo "===> uname -a"
+uname -a
+echo
+
+echo "===> cat /proc/cmdline"
+cat /proc/cmdline
+echo
+
+echo "===> lscpu"
+lscpu
+echo
+
+echo "===> lsmem"
+lsmem
+echo
+
+echo "===> get-net-params"
+get-net-params
+echo
+
+echo "===> ethtool -c exp0"
+sudo ethtool -c exp0
+
+echo "===> nici"
+nici
+echo
+
+echo "===> CPU vul."
+sudo sh -c 'head /sys/devices/system/cpu/vulnerabilities/*'
+echo
+
+echo "===> tuned-adm active"
+sudo tuned-adm active
+echo
+
+echo "===> cpucstate"
+cpucstate -s 
+echo
+
+echo "===> cpuf"
+cpuf
