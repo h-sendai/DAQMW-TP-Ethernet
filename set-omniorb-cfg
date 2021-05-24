@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if ! egrep -q '^giopMaxMsgSize' /etc/omniORB.cfg; then
+    sudo sh -c 'echo "giopMaxMsgSize = 8388608" >> /etc/omniORB.cfg'
+fi
