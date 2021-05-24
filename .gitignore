@@ -1,0 +1,12 @@
+.depend
+*.o
+*.d
+*~
+autogen
+TPEtherReaderComp
+TPEtherLoggerComp
+omninames*
+rtc.conf
+.confFilePath
+decode-latency
+log*
